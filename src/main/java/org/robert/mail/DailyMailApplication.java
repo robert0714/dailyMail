@@ -35,8 +35,8 @@ public class DailyMailApplication implements CommandLineRunner {
 
 	@Value("${org.robert.mail.attachment:${HOME}}")
 	private String folder;
-	@Value("${org.robert.mail.titlePrfix: }")
-	private String titlePrfix;
+	@Value("${org.robert.mail.titlePrefix: }")
+	private String titlePrefix;
 	@Value("${org.robert.mail.titleSufffix: }")
 	private String titleSufffix;
 
@@ -59,7 +59,7 @@ public class DailyMailApplication implements CommandLineRunner {
 			File output = origin;
 			try {
 				System.out.println(output.getAbsolutePath());
-				System.out.println("titlePrfix: " + titlePrfix);
+				System.out.println("titlePrefix: " + titlePrefix);
 				System.out.println("titleSufffix: " + titleSufffix);
 				BodyPart messageBodyPart = new MimeBodyPart();
 
