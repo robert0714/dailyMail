@@ -65,7 +65,7 @@ public class DailyMailApplication implements CommandLineRunner {
 
 				String filename = origin.getName();
 
-				String title = titlePrfix + origin.getName() + titleSufffix;
+				String title = titlePrefix + origin.getName() + titleSufffix;
 
 				FileInputStream fis = new FileInputStream(output);
 				ByteArrayDataSource rawData = new ByteArrayDataSource(fis, "application/octet-stream");
