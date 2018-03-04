@@ -47,17 +47,18 @@
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<mainClass>org.robert.mail.DailyMailApplication</mainClass>
-					<executable>true</executable>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	<finalName>dailyMail</finalName>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<configuration>
+				<mainClass>org.robert.mail.DailyMailApplication</mainClass>
+				<executable>true</executable>
+			</configuration>
+		</plugin>
+	</plugins>
+</build>
 
 
 </project>
