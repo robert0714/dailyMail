@@ -4,6 +4,6 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@ComponentScan("develop.service.mail")
+@ComponentScan("develop.service.sms")
 public class SMSConfig {
 }

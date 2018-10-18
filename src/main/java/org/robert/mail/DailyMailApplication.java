@@ -18,11 +18,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 
+import develop.service.conf.MailConfig;
+import develop.service.conf.SMSConfig;
 import develop.service.mail.MailProvider;
 import develop.service.sms.SMSService;
 
 @SpringBootApplication(scanBasePackages = { "develop.service" })
+@Import({ MailConfig.class, SMSConfig.class })
 public class DailyMailApplication implements CommandLineRunner {
 	/** The log. */
 	private Logger log = LoggerFactory.getLogger(this.getClass());
