@@ -16,16 +16,16 @@ import com.baidubce.services.sms.model.SendMessageResponse;
 @Component(value = "community")
 public class SMSServiceCommunityImpl implements SMSService {
 
-	@Value("${service.sms.access-key-id}")
+	@Value("${service.sms.access-key-id:}")
 	private String ACCESS_KEY_ID;
 
-	@Value("${service.sms.secret-access-key}")
+	@Value("${service.sms.secret-access-key:}")
 	private String SECRET_ACCESS_KEY;
 
-	@Value("${service.sms.endpoint}")
+	@Value("${service.sms.endpoint:}")
 	private String ENDPOINT;
 
-	@Value("${service.sms.template-id}")
+	@Value("${service.sms.template-id:}")
 	private String templateId;
 
 	public String getSmsCode() {

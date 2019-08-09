@@ -11,16 +11,16 @@ import org.springframework.stereotype.Component;
 public class SMSServiceHiNetImpl implements SMSService {
 	private static Logger logger = LoggerFactory.getLogger(SMSServiceHiNetImpl.class);
 	
-	@Value("${service.sms.hinet.account}")
+	@Value("${service.sms.hinet.account:}")
 	private String ACCOUNT;
 
-	@Value("${service.sms.hinet.password}")
+	@Value("${service.sms.hinet.password:}")
 	private String PASSWORD;
 
-	@Value("${service.sms.hinet.server}")
+	@Value("${service.sms.hinet.server:}")
 	private String SERVER;
 
-	@Value("${service.sms.hinet.port}")
+	@Value("${service.sms.hinet.port:}")
 	private Integer SERVER_PORT;
 
 	public String getSmsCode() {
